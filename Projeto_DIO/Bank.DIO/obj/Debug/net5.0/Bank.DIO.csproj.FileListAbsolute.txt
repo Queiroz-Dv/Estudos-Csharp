@@ -1,0 +1,16 @@
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\bin\Debug\net5.0\Bank.DIO.exe
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\bin\Debug\net5.0\Bank.DIO.deps.json
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\bin\Debug\net5.0\Bank.DIO.runtimeconfig.json
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\bin\Debug\net5.0\Bank.DIO.runtimeconfig.dev.json
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\bin\Debug\net5.0\Bank.DIO.dll
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\bin\Debug\net5.0\ref\Bank.DIO.dll
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\bin\Debug\net5.0\Bank.DIO.pdb
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.csproj.AssemblyReference.cache
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.AssemblyInfoInputs.cache
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.AssemblyInfo.cs
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.csproj.CoreCompileInputs.cache
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.dll
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\ref\Bank.DIO.dll
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.pdb
+C:\Users\Dubst\Documents\GitHub\Estudos-Csharp\Projeto_DIO\Bank.DIO\obj\Debug\net5.0\Bank.DIO.genruntimeconfig.cache
