@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1684
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EverisStore.Domain", "EverisSore\EverisStore.Domain.csproj", "{01063BD0-6620-4490-825F-A5655B1227AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EverisStoreApplication", "EverisStoreApplication\EverisStoreApplication.csproj", "{89FE5762-43BE-4C97-8606-2D4431A5492A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01063BD0-6620-4490-825F-A5655B1227AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01063BD0-6620-4490-825F-A5655B1227AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01063BD0-6620-4490-825F-A5655B1227AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01063BD0-6620-4490-825F-A5655B1227AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FE5762-43BE-4C97-8606-2D4431A5492A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FE5762-43BE-4C97-8606-2D4431A5492A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FE5762-43BE-4C97-8606-2D4431A5492A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FE5762-43BE-4C97-8606-2D4431A5492A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF0E2A55-D6C3-4707-A237-BB1282158244}
+	EndGlobalSection
+EndGlobal

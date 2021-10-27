@@ -1,0 +1,6 @@
+C:\Users\Dubst\source\repos\EverisStore\EverisSore\bin\Debug\EverisSore.dll
+C:\Users\Dubst\source\repos\EverisStore\EverisSore\bin\Debug\EverisSore.pdb
+C:\Users\Dubst\source\repos\EverisStore\EverisSore\obj\Debug\EverisStore.Domain.csprojAssemblyReference.cache
+C:\Users\Dubst\source\repos\EverisStore\EverisSore\obj\Debug\EverisStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Dubst\source\repos\EverisStore\EverisSore\obj\Debug\EverisSore.dll
+C:\Users\Dubst\source\repos\EverisStore\EverisSore\obj\Debug\EverisSore.pdb

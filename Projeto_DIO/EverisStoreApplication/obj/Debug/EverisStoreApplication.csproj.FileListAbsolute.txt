@@ -1,0 +1,2 @@
+C:\Users\Dubst\source\repos\EverisStore\EverisStoreApplication\obj\Debug\EverisStoreApplication.csprojAssemblyReference.cache
+C:\Users\Dubst\source\repos\EverisStore\EverisStoreApplication\obj\Debug\EverisStoreApplication.csproj.CoreCompileInputs.cache
