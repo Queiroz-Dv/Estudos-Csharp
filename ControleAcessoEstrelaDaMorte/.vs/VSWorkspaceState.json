@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\AcessoControle",
+    "\\src\\AcessoControle\\Dao",
+    "\\src\\AcessoControle\\Entidades",
+    "\\src\\AcessoControle\\ViewModels"
+  ],
+  "SelectedNode": "\\src\\AcessoControle\\Dao\\PilotoDao.cs",
+  "PreviewInSolutionExplorer": false
+}
