@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SetupApi</name>
+    </assembly>
+    <members>
+        <member name="M:SetupApi.Controllers.CourseController.Post(SetupApi.Models.Course.CourseViewModelInput)">
+            <summary>
+            This service permits to register a course for a user authenticated.
+            </summary>
+            <returns>Returns ok status</returns>
+        </member>
+        <member name="M:SetupApi.Controllers.CourseController.Get">
+            <summary>
+            This service permits to get all courses actives in user.
+            </summary>
+            <returns>Returns ok status</returns>
+        </member>
+        <member name="M:SetupApi.Controllers.UserController.Login(SetupApi.Models.Users.LoginViewModelInput)">
+            <summary>
+            This service allow to authenticate an user to registered and activated.
+            </summary>
+            <param name="loginViewModelInput">Login's view model</param>
+            <returns>Returns ok status</returns>
+        </member>
+    </members>
+</doc>
