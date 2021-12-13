@@ -16,5 +16,15 @@ namespace StockTracking
         {
             InitializeComponent();
         }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            FrmMain frm = new FrmMain();
+            //Hide the current page
+            this.Hide();
+            //Show the other page
+            frm.ShowDialog();
+            
+        }
     }
 }

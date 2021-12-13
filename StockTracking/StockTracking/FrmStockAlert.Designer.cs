@@ -53,6 +53,7 @@
             this.btnOk.TabIndex = 5;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // dataGridView1
             // 

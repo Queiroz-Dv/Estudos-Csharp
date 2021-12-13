@@ -20,3 +20,7 @@ C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.
 C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.FrmCustomer.resources
 C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.FrmCustomerList.resources
 C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.FrmSales.resources
+C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.FrmDeleted.resources
+C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.FrmMain.resources
+C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.FrmSalesList.resources
+C:\Users\Dubst\source\repos\StockTracking\StockTracking\obj\Debug\StockTracking.FrmStockAlert.resources
