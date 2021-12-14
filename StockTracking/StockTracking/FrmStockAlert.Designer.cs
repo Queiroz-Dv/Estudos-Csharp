@@ -47,7 +47,7 @@
             // btnOk
             // 
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(419, 21);
+            this.btnOk.Location = new System.Drawing.Point(328, 33);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(127, 55);
             this.btnOk.TabIndex = 5;
