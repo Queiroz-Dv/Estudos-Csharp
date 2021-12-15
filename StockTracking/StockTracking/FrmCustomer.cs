@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockTracking.DAL.DAO;
+using StockTracking.BLL;
+using StockTracking.DAL.DTO;
 
 namespace StockTracking
 {
@@ -20,6 +23,23 @@ namespace StockTracking
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        CustomerBLL bll = new CustomerBLL();
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtCustomerName.Text.Trim() == "")
+                MessageBox.Show("Customer Name is empty");
+            else
+            {
+                CustomerDetailDTO customer = new CustomerDetailDTO();
+                customer.CustomerName = txtCustomerName.Text;
+                if(bll.Insert(customer))
+                {
+                    MessageBox.Show("Customer was added");
+                    txtCustomerName.Clear();
+                }
+            }
         }
     }
 }
