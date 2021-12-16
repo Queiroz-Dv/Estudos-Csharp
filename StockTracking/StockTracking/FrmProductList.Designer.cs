@@ -50,7 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
@@ -126,7 +126,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.cmbCategory);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtProductName);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -143,18 +143,18 @@
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clean";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(939, 179);
+            this.btnSearch.Location = new System.Drawing.Point(938, 179);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(127, 41);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox2
             // 
@@ -305,13 +305,13 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Category";
             // 
-            // textBox1
+            // txtProductName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(197, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 35);
-            this.textBox1.TabIndex = 3;
+            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.Location = new System.Drawing.Point(197, 23);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(202, 35);
+            this.txtProductName.TabIndex = 3;
             // 
             // label2
             // 
@@ -346,6 +346,7 @@
             this.Name = "FrmProductList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product List";
+            this.Load += new System.EventHandler(this.FrmProductList_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -365,7 +366,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label label3;

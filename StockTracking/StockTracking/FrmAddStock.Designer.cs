@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,39 +51,10 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(475, 0);
+            this.panel1.Location = new System.Drawing.Point(446, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 492);
+            this.panel1.Size = new System.Drawing.Size(456, 762);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.cmbCategory);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(291, 125);
-            this.panel2.TabIndex = 0;
-            // 
-            // cmbCategory
-            // 
-            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(8, 55);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(202, 37);
-            this.cmbCategory.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(3, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 29);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Category";
             // 
             // dataGridView1
             // 
@@ -94,8 +65,39 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(291, 367);
+            this.dataGridView1.Size = new System.Drawing.Size(456, 637);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cmbCategory);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(456, 125);
+            this.panel2.TabIndex = 0;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(8, 55);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(202, 37);
+            this.cmbCategory.TabIndex = 7;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(3, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 29);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Category";
             // 
             // txtPrice
             // 
@@ -116,14 +118,14 @@
             this.label4.TabIndex = 12;
             this.label4.Text = " Product Price";
             // 
-            // textBox1
+            // txtProductName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(221, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(197, 35);
-            this.textBox1.TabIndex = 9;
+            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.Location = new System.Drawing.Point(221, 20);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.ReadOnly = true;
+            this.txtProductName.Size = new System.Drawing.Size(197, 35);
+            this.txtProductName.TabIndex = 9;
             // 
             // label2
             // 
@@ -174,28 +176,30 @@
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmAddStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 492);
+            this.ClientSize = new System.Drawing.Size(902, 762);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmAddStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Stock";
+            this.Load += new System.EventHandler(this.FrmAddStock_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,7 +214,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Label label5;
