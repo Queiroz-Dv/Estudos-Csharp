@@ -52,7 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -86,7 +86,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtCustomerName);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtProductName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -103,6 +103,7 @@
             this.btnClear.TabIndex = 20;
             this.btnClear.Text = "Clean";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
@@ -113,6 +114,7 @@
             this.btnSearch.TabIndex = 21;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // chDate
             // 
@@ -330,13 +332,13 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Customer Name";
             // 
-            // textBox1
+            // txtProductName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(235, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 35);
-            this.textBox1.TabIndex = 5;
+            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.Location = new System.Drawing.Point(235, 74);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(202, 35);
+            this.txtProductName.TabIndex = 5;
             // 
             // label2
             // 
@@ -425,6 +427,7 @@
             this.Name = "FrmSalesList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales List";
+            this.Load += new System.EventHandler(this.FrmSalesList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -446,7 +449,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label1;
