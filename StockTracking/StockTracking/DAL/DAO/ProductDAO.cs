@@ -51,7 +51,7 @@ namespace StockTracking.DAL.DAO
                                 productID = p.ID,
                                 categoryID = c.ID
                             }).OrderBy(x => x.productName).ToList();
-                foreach(var item in list)
+                foreach (var item in list)
                 {
                     ProductDetailDTO dto = new ProductDetailDTO();
                     dto.ProductName = item.productName;
@@ -72,15 +72,22 @@ namespace StockTracking.DAL.DAO
         }
 
         public bool Update(PRODUCT entity)
-            {
+        {
             try
             {
                 PRODUCT product = db.PRODUCTs.First(x => x.ID == entity.ID);
-                if(entity.CategoryID==0)
+                if (entity.CategoryID == 0)
                 {
                     product.StockAmount = entity.StockAmount;
-                    db.SaveChanges();
+
                 }
+                else
+                {
+                    product.ProductName = entity.ProductName;
+                    product.Price = entity.Price;
+                    product.CategoryID = entity.CategoryID;
+                }
+                db.SaveChanges();
                 return true;
             }
             catch (Exception)
@@ -88,6 +95,6 @@ namespace StockTracking.DAL.DAO
 
                 throw;
             }
-            }
         }
     }
+}
