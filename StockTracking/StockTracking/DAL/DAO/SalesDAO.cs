@@ -14,10 +14,23 @@ namespace StockTracking.DAL.DAO
         {
             try
             {
-                SALE sales = db.SALES.First(x => x.ID == entity.ID);
-                sales.isDeleted = true;
-                sales.DeletedDate = DateTime.Today;
-                db.SaveChanges();
+                if (entity.ID != 0)
+                {
+                    SALE sales = db.SALES.First(x => x.ID == entity.ID);
+                    sales.isDeleted = true;
+                    sales.DeletedDate = DateTime.Today;
+                    db.SaveChanges();
+                }
+                else if(entity.ProductID!=0)
+                {
+                    List<SALE> sales = db.SALES.Where(x => x.ProductID == entity.ProductID).ToList();
+                    foreach (var item in sales)
+                    {
+                        item.isDeleted = true;
+                        item.DeletedDate = DateTime.Today;
+                    }
+                    db.SaveChanges();
+                }
                 return true;
             }
             catch (Exception)
@@ -52,7 +65,7 @@ namespace StockTracking.DAL.DAO
             try
             {
                 List<SalesDetailDTO> sales = new List<SalesDetailDTO>();
-                var list = (from s in db.SALES.Where(x=>x.isDeleted==false)
+                var list = (from s in db.SALES.Where(x => x.isDeleted == false)
                             join p in db.PRODUCTs on s.ProductID equals p.ID
                             join c in db.CUSTOMERs on s.CustomerID equals c.ID
                             join category in db.CATEGORies on s.CategoryID equals category.ID
