@@ -78,12 +78,12 @@ namespace StockTracking
         private void btnSearch_Click(object sender, EventArgs e)
         {
             List<SalesDetailDTO> list = dto.Sales;
-            if(txtProductName.Text.Trim()!="")
+            if (txtProductName.Text.Trim() != "")
                 list = list.Where(x => x.ProductName.Contains(txtProductName.Text)).ToList();
             if (txtCustomerName.Text.Trim() != "")
                 list = list.Where(x => x.CustomerName.Contains(txtCustomerName.Text)).ToList();
-            if (cmbCategory.SelectedIndex!=-1)
-                list = list.Where(x => x.CategoryID==Convert.ToInt32(cmbCategory.SelectedValue)).ToList();
+            if (cmbCategory.SelectedIndex != -1)
+                list = list.Where(x => x.CategoryID == Convert.ToInt32(cmbCategory.SelectedValue)).ToList();
             if (txtPrice.Text.Trim() != "")
             {
                 if (rbPriceEquals.Checked)
@@ -166,6 +166,28 @@ namespace StockTracking
                 dto = bll.Select();
                 dataGridView1.DataSource = dto.Sales;
                 CleanFilters();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (detail.SalesID == 0)
+                MessageBox.Show("Please select a sales from table");
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure?", "Warning!!", MessageBoxButtons.YesNo);
+                if(result==DialogResult.Yes)
+                {
+                    if(bll.Delete(detail))
+                    {
+                        MessageBox.Show("Sales was deleted");
+                        bll = new SalesBLL();
+                        dto = bll.Select();
+                        dataGridView1.DataSource = dto.Sales;
+                        CleanFilters();
+                    }
+                }
+
             }
         }
     }
