@@ -8,11 +8,23 @@ using StockTracking.DAL.DTO;
 
 namespace StockTracking.DAL.DAO
 {
-    public class CategoryDAO :StockContext, IDAO<CATEGORY, CategoryDetailDTO>
+    public class CategoryDAO : StockContext, IDAO<CATEGORY, CategoryDetailDTO>
     {
         public bool Delete(CATEGORY entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                CATEGORY category = db.CATEGORies.First(x => x.ID == entity.ID);
+                category.isDeleted = true;
+                category.DeletedDate = DateTime.Today;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool GetBack(int ID)
@@ -38,14 +50,14 @@ namespace StockTracking.DAL.DAO
         public List<CategoryDetailDTO> Select()
         {
             List<CategoryDetailDTO> categories = new List<CategoryDetailDTO>();
-            var list = db.CATEGORies;
-            foreach ( var item in list)
+            var list = db.CATEGORies.Where(x => x.isDeleted == false).ToList();
+            foreach (var item in list)
             {
                 CategoryDetailDTO dto = new CategoryDetailDTO();
                 dto.ID = item.ID;
                 dto.CategoryName = item.CategoryName;
                 categories.Add(dto);
-                
+
             }
             return categories;
         }
