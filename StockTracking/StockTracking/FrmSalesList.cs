@@ -67,6 +67,9 @@ namespace StockTracking
             dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[9].Visible = false;
             dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
+            dataGridView1.Columns[13].Visible = false;
 
 
             cmbCategory.DataSource = dto.Categories;

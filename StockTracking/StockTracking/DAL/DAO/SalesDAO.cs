@@ -21,7 +21,7 @@ namespace StockTracking.DAL.DAO
                     sales.DeletedDate = DateTime.Today;
                     db.SaveChanges();
                 }
-                else if(entity.ProductID!=0)
+                else if (entity.ProductID != 0)
                 {
                     List<SALE> sales = db.SALES.Where(x => x.ProductID == entity.ProductID).ToList();
                     foreach (var item in sales)
@@ -31,7 +31,7 @@ namespace StockTracking.DAL.DAO
                     }
                     db.SaveChanges();
                 }
-                else if (entity.CustomerID!=0)
+                else if (entity.CustomerID != 0)
                 {
                     List<SALE> sales = db.SALES.Where(x => x.CustomerID == entity.CustomerID).ToList();
                     foreach (var item in sales)
@@ -52,7 +52,19 @@ namespace StockTracking.DAL.DAO
 
         public bool GetBack(int ID)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SALE sale = db.SALES.First(x => x.ID == ID);
+                sale.isDeleted = false;
+                sale.DeletedDate = null;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool Insert(SALE entity)
@@ -105,6 +117,58 @@ namespace StockTracking.DAL.DAO
                     dto.Price = item.salesprice;
                     dto.SalesAmount = item.salesamount;
                     dto.SalesDate = item.salesdate;
+                    sales.Add(dto);
+                }
+                return sales;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public List<SalesDetailDTO> Select(bool isDeleted)
+        {
+            try
+            {
+                List<SalesDetailDTO> sales = new List<SalesDetailDTO>();
+                var list = (from s in db.SALES.Where(x => x.isDeleted == isDeleted)
+                            join p in db.PRODUCTs on s.ProductID equals p.ID
+                            join c in db.CUSTOMERs on s.CustomerID equals c.ID
+                            join category in db.CATEGORies on s.CategoryID equals category.ID
+                            select new
+                            {
+                                productname = p.ProductName,
+                                customername = c.CustomerName,
+                                categoryname = category.CategoryName,
+                                productID = s.ProductID,
+                                customerID = s.CustomerID,
+                                salesID = s.ID,
+                                categoryID = s.CategoryID,
+                                salesprice = s.ProductSalesPrice,
+                                salesamount = s.PorductSalesAmount,
+                                salesdate = s.SalesDate,
+                                categoryDeleted = category.isDeleted,
+                                customerdeleted = c.isDeleted,
+                                productdeleted = p.isDeleted
+                            }).OrderBy(x => x.salesdate).ToList();
+                foreach (var item in list)
+                {
+                    SalesDetailDTO dto = new SalesDetailDTO();
+                    dto.ProductName = item.productname;
+                    dto.CustomerName = item.customername;
+                    dto.CategoryName = item.categoryname;
+                    dto.ProductID = item.productID;
+                    dto.CustomerID = item.customerID;
+                    dto.CategoryID = item.categoryID;
+                    dto.SalesID = item.salesID;
+                    dto.Price = item.salesprice;
+                    dto.SalesAmount = item.salesamount;
+                    dto.SalesDate = item.salesdate;
+                    dto.isCategoryDeleted = item.categoryDeleted;
+                    dto.isCustomerDeleted = item.customerdeleted;
+                    dto.isProductsDeleted = item.productdeleted;
                     sales.Add(dto);
                 }
                 return sales;
