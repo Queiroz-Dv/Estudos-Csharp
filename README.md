@@ -1,2 +1,2 @@
 # Estudos-Csharp
-Estudos aplicados do BootCamp Everis da DIO
+Estudos realizados em CSharp
